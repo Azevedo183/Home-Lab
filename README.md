@@ -1,8 +1,8 @@
 # Homelab
 
-Neste momento conta com servidor Proxmox VE de nó único que aloja serviços majoritariamente
-em contentores LXC, com acesso remoto via WireGuard e Pangolin e
-armazenamento em ZFS.
+Servidor Proxmox VE de nó único que aloja serviços auto-alojados,
+maioritariamente em contentores LXC, com acesso remoto via WireGuard
+e Pangolin e armazenamento em ZFS.
 
 ## Objetivos
 
@@ -22,10 +22,24 @@ armazenamento em ZFS.
 | Armazenamento | ZFS: 931 GiB + 465 GiB |
 
 ## Serviços
-| Serviço | Função | Tipo | Instalação |
-|---|---|---|---|
-| ... | ... | ... | ... |
 
+| Serviço | Função | Tipo | Instalação | Exposto? |
+|---|---|---|---|---|
+| Vault (Ubuntu + Cockpit) | Armazenamento partilhado e SMB | LXC | Manual | VPN |
+| WireGuard + WGDashboard | Acesso VPN à rede interna | LXC | Community-Scripts | VPN |
+| Jellyfin | Streaming de video | LXC | Community-Scripts | Pangolin |
+| MySpeed | Teste de velocidade automático | LXC | Community-Scripts | VPN |
+| Docker | Servidor Minecraft | LXC | Community-Scripts | VPN |
+| Librespeed | Teste de velocidade interno | LXC | Community-Scripts | VPN |
+| Navidrome | Streaming de audio | LXC | Community-Scripts | Pangolin |
+| Aria2 | Gestor de Downloads | LXC | Community-Scripts | VPN |
+| Pingvin | Partilha de Ficheiros | LXC + Docker | Docker Compose | Pangolin |
+| Stirling PDF | Ferramenta de PDF | LXC | Community-Scripts | Pangolin |
+| Nextcloud | Drive Pessoal | LXC + Docker | Docker Compose | Pangolin |
+| N8N | Automatização por flow | LXC + Docker | Docker Compose | Pangolin |
+| Immich | Backup de fotos e videos | LXC | Community-Scripts | Pangolin |
+| Pangolin | Proxy Zero-Trust | LXC + Docker | Docker Compose | Direto |
+| Cloudflare DDNS | DDNS | LXC | Community-Scripts | VPN |
 
 ## Rede e acesso remoto
 
