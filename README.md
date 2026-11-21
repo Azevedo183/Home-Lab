@@ -11,7 +11,7 @@ e Pangolin e armazenamento em ZFS.
 - Documentar e reproduzir a infraestrutura
 
 ## Arquitetura
-...
+![Arquitetura do homelab](diagrams/arquitetura.png)
 
 ## Hardware
 | Componente | Especificação |
