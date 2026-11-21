@@ -26,20 +26,20 @@ e Pangolin e armazenamento em ZFS.
 | Serviço | Função | Tipo | Instalação | Exposto? |
 |---|---|---|---|---|
 | Vault (Ubuntu + Cockpit) | Armazenamento partilhado e SMB | LXC | Manual | VPN |
-| WireGuard + WGDashboard | Acesso VPN à rede interna | LXC | Community-Scripts | VPN |
-| Jellyfin | Streaming de video | LXC | Community-Scripts | Pangolin |
+| WireGuard + WGDashboard | Acesso VPN à rede interna | LXC | Community-Scripts | Direto (UDP) |
+| Jellyfin | Streaming de vídeo | LXC | Community-Scripts | Pangolin |
 | MySpeed | Teste de velocidade automático | LXC | Community-Scripts | VPN |
-| Docker | Servidor Minecraft | LXC | Community-Scripts | VPN |
-| Librespeed | Teste de velocidade interno | LXC | Community-Scripts | VPN |
-| Navidrome | Streaming de audio | LXC | Community-Scripts | Pangolin |
-| Aria2 | Gestor de Downloads | LXC | Community-Scripts | VPN |
-| Pingvin | Partilha de Ficheiros | LXC + Docker | Docker Compose | Pangolin |
-| Stirling PDF | Ferramenta de PDF | LXC | Community-Scripts | Pangolin |
-| Nextcloud | Drive Pessoal | LXC + Docker | Docker Compose | Pangolin |
-| N8N | Automatização por flow | LXC + Docker | Docker Compose | Pangolin |
-| Immich | Backup de fotos e videos | LXC | Community-Scripts | Pangolin |
-| Pangolin | Proxy Zero-Trust | LXC + Docker | Docker Compose | Direto |
-| Cloudflare DDNS | DDNS | LXC | Community-Scripts | VPN |
+| Docker | Host do servidor Minecraft | LXC + Docker | Community-Scripts + Docker Compose | Direto |
+| LibreSpeed | Teste de velocidade interno | LXC | Community-Scripts | VPN |
+| Navidrome | Streaming de áudio | LXC | Community-Scripts | Pangolin |
+| Aria2 | Gestor de downloads | LXC | Community-Scripts | VPN |
+| Pingvin Share | Partilha de ficheiros | LXC + Docker | Docker Compose | Pangolin |
+| Stirling PDF | Ferramentas de PDF | LXC | Community-Scripts | Pangolin |
+| Nextcloud | Drive pessoal | LXC + Docker | Docker Compose | Pangolin |
+| n8n | Automatização de workflows | LXC + Docker | Docker Compose | Pangolin |
+| Immich | Backup de fotos e vídeos | LXC | Community-Scripts | Pangolin |
+| Pangolin | Reverse proxy zero-trust | LXC + Docker | Docker Compose | Direto |
+| Cloudflare DDNS | Atualização do DNS dinâmico | LXC | Community-Scripts | VPN |
 
 ## Rede e acesso remoto
 
@@ -85,10 +85,31 @@ A gestão da infraestrutura nunca passa pela internet pública.
 | Proxmox, SSH, Portainer | Não | Apenas via VPN |
 
 ## Backups
-...
+
+Atualmente não existe uma estratégia de backups implementada, devido
+à falta de capacidade de armazenamento e de hardware disponível. Sei
+que isto representa um risco: uma falha de disco pode causar perda de
+dados.
+
+**Planeado:**
+- Snapshots ZFS regulares
+- Cópia dos dados importantes para um disco externo ou segundo
+  dispositivo, seguindo a regra 3-2-1
 
 ## Lições aprendidas
-...
+
+- **Armazenamento partilhado:** gerir o acesso a dados comuns entre
+  várias VMs e contentores LXC, incluindo permissões e partilhas SMB.
+- **Redes no mesmo host:** configurar e manusear várias interfaces de
+  rede dentro do mesmo servidor Proxmox.
+- **Limites de hardware:** adaptar as soluções às restrições físicas
+  do equipamento (RAM, armazenamento, expansão).
 
 ## Próximos passos
-- [ ] ...
+
+- [ ] Migrar para um host com mais capacidade de processamento e
+      possibilidade de upgrades (PCIe)
+- [ ] Ativar os serviços que estão desligados por falta de recursos
+- [ ] Instalar o Home Assistant para controlar os dispositivos IoT da habitação
+- [ ] Implementar a estratégia de backups
+- [ ] Documentar cada serviço em `docs/services/`
