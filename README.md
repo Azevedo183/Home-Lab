@@ -26,7 +26,7 @@ e Pangolin e armazenamento em ZFS.
 | Serviço | Função | Tipo | Instalação | Exposto? |
 |---|---|---|---|---|
 | Vault (Ubuntu + Cockpit) | Armazenamento partilhado e SMB | LXC | Manual | VPN |
-| WireGuard + WGDashboard | Acesso VPN à rede interna | LXC | Community-Scripts | Direto (UDP) |
+| [WireGuard + WGDashboard](docs/services/wireguard.md) | Acesso VPN à rede interna | LXC | Community-Scripts | Direto (UDP) |
 | [Jellyfin](docs/services/jellyfin.md) | Streaming de vídeo | LXC | Community-Scripts | Pangolin |
 | MySpeed | Teste de velocidade automático | LXC | Community-Scripts | VPN |
 | Docker | Host do servidor Minecraft | LXC + Docker | Community-Scripts + Docker Compose | Direto |
