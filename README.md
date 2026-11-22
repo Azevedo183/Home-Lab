@@ -29,7 +29,7 @@ e Pangolin e armazenamento em ZFS.
 | [WireGuard + WGDashboard](docs/services/wireguard.md) | Acesso VPN à rede interna | LXC | Community-Scripts | Direto (UDP) |
 | [Jellyfin](docs/services/jellyfin.md) | Streaming de vídeo | LXC | Community-Scripts | Pangolin |
 | [MySpeed](docs/services/myspeed.md) | Teste de velocidade automático | LXC | Community-Scripts | VPN |
-| Docker | Host do servidor Minecraft | LXC + Docker | Community-Scripts + Docker Compose | Direto |
+| [Docker](docs/services/docker.md) | Host Docker e servidor Minecraft | LXC + Docker | Community-Scripts + Docker Compose | Direto (Minecraft) |
 | LibreSpeed | Teste de velocidade interno | LXC | Community-Scripts | VPN |
 | Navidrome | Streaming de áudio | LXC | Community-Scripts | Pangolin |
 | Aria2 | Gestor de downloads | LXC | Community-Scripts | VPN |
@@ -81,7 +81,7 @@ A gestão da infraestrutura nunca passa pela internet pública.
 |---|---|---|
 | Serviços web (Jellyfin, Nextcloud, ...) | Sim | HTTPS, login, filtro geográfico |
 | WireGuard | Sim (UDP) | Autenticação por chaves |
-| Servidor Minecraft | Sim | ... |
+| Servidor Minecraft | Sim | Whitelist |
 | Proxmox, SSH, Portainer | Não | Apenas via VPN |
 
 ## Backups
