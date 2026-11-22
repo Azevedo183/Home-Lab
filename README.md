@@ -33,7 +33,7 @@ e Pangolin e armazenamento em ZFS.
 | [LibreSpeed](docs/services/librespeed.md) | Teste de velocidade interno | LXC | Community-Scripts | VPN |
 | [Navidrome](docs/services/navidrome.md) | Streaming de áudio | LXC | Community-Scripts | Pangolin |
 | [Aria2](docs/services/aria2.md) | Gestor de downloads | LXC | Community-Scripts | VPN |
-| Pingvin Share | Partilha de ficheiros | LXC + Docker | Docker Compose | Pangolin |
+| [Pingvin Share](docs/services/pingvin.md) | Partilha de ficheiros | LXC + Docker | Docker Compose | Pangolin |
 | Stirling PDF | Ferramentas de PDF | LXC | Community-Scripts | Pangolin |
 | Nextcloud | Drive pessoal | LXC + Docker | Docker Compose | Pangolin |
 | [n8n](docs/services/n8n.md) | Automatização de workflows | LXC + Docker | Docker Compose | Pangolin |
