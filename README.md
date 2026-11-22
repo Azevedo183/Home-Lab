@@ -28,7 +28,7 @@ e Pangolin e armazenamento em ZFS.
 | Vault (Ubuntu + Cockpit) | Armazenamento partilhado e SMB | LXC | Manual | VPN |
 | [WireGuard + WGDashboard](docs/services/wireguard.md) | Acesso VPN à rede interna | LXC | Community-Scripts | Direto (UDP) |
 | [Jellyfin](docs/services/jellyfin.md) | Streaming de vídeo | LXC | Community-Scripts | Pangolin |
-| MySpeed | Teste de velocidade automático | LXC | Community-Scripts | VPN |
+| [MySpeed](docs/services/myspeed.md) | Teste de velocidade automático | LXC | Community-Scripts | VPN |
 | Docker | Host do servidor Minecraft | LXC + Docker | Community-Scripts + Docker Compose | Direto |
 | LibreSpeed | Teste de velocidade interno | LXC | Community-Scripts | VPN |
 | Navidrome | Streaming de áudio | LXC | Community-Scripts | Pangolin |
@@ -36,7 +36,7 @@ e Pangolin e armazenamento em ZFS.
 | Pingvin Share | Partilha de ficheiros | LXC + Docker | Docker Compose | Pangolin |
 | Stirling PDF | Ferramentas de PDF | LXC | Community-Scripts | Pangolin |
 | Nextcloud | Drive pessoal | LXC + Docker | Docker Compose | Pangolin |
-| n8n | Automatização de workflows | LXC + Docker | Docker Compose | Pangolin |
+| [n8n](docs/services/n8n.md) | Automatização de workflows | LXC + Docker | Docker Compose | Pangolin |
 | Immich | Backup de fotos e vídeos | LXC | Community-Scripts | Pangolin |
 | Pangolin | Reverse proxy zero-trust | LXC + Docker | Docker Compose | Direto |
 | Cloudflare DDNS | Atualização do DNS dinâmico | LXC | Community-Scripts | VPN |
