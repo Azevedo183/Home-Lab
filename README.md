@@ -27,7 +27,7 @@ e Pangolin e armazenamento em ZFS.
 |---|---|---|---|---|
 | Vault (Ubuntu + Cockpit) | Armazenamento partilhado e SMB | LXC | Manual | VPN |
 | WireGuard + WGDashboard | Acesso VPN à rede interna | LXC | Community-Scripts | Direto (UDP) |
-| Jellyfin | Streaming de vídeo | LXC | Community-Scripts | Pangolin |
+| [Jellyfin](docs/services/jellyfin.md) | Streaming de vídeo | LXC | Community-Scripts | Pangolin |
 | MySpeed | Teste de velocidade automático | LXC | Community-Scripts | VPN |
 | Docker | Host do servidor Minecraft | LXC + Docker | Community-Scripts + Docker Compose | Direto |
 | LibreSpeed | Teste de velocidade interno | LXC | Community-Scripts | VPN |
