@@ -57,6 +57,7 @@ onboot: 1
 ## Servidor Minecraft
 
 Corre em Docker Compose com a imagem `itzg/minecraft-server`.
+Atualmente esta com a seguinte configuração
 
 | Item | Valor |
 |---|---|
@@ -69,6 +70,8 @@ Corre em Docker Compose com a imagem `itzg/minecraft-server`.
 
 Os mods que só funcionam no cliente são excluídos através da variável
 `CF_EXCLUDE_MODS`, porque podem impedir o servidor de arrancar.
+
+Os docker-compose de todas as instancias encontram-se em arquivo em [`compose/minecraft/`](../../compose/mineccraft)
 
 ## Segurança
 
@@ -87,7 +90,4 @@ Os mods que só funcionam no cliente são excluídos através da variável
   falha de segurança.
 - Rever a memória do contentor face aos 12 GB do Minecraft, para deixar
   margem aos restantes serviços Docker.
-- Reforçar a segurança do servidor Minecraft (lista de jogadores
-  autorizados, autenticação oficial e mods atualizados).
 - Incluir o mundo do Minecraft na futura estratégia de backups.
-- Publicar o ficheiro Compose do Minecraft em `compose/minecraft/`.

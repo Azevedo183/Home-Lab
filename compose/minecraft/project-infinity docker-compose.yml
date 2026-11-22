@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  minecraft:
+    container_name: project-infinity
+    image: itzg/minecraft-server:latest
+    tty: true
+    stdin_open: true
+    ports:
+      - "25565:25565"
+    environment:
+      TYPE: "AUTO_CURSEFORGE"
+      CF_API_KEY: "${CF_API_KEY}"
+      CF_SLUG: project-infinity-0-1
+      CF_OVERRIDES_EXCLUSIONS: "shaderpacks/**"
+      CF_EXCLUDE_INCLUDE_FILE: ""
+      CF_EXCLUDE_MODS: "nolijium,mouse-tweaks,more-overlays-updated,appleskin,neat,betterf3,fancymenu,ok-zoomer,controlling,searchables,immediatelyfast,entityculling,extreme-sound-muffler,toast-control,dark-mode-everywhere,colorful-hearts,mekanism-ctm-w-fusion,project-infinity-chinese-translation-resource,mekanism-extras-ctm-fusion-port,configured,ftb-backups-2"
+      INIT_MEMORY: 4G
+      MAX_MEMORY: 12G
+      VERSION: "1.20.1"
+      EULA: "TRUE"
+      ENABLE_AUTOPAUSE: "FALSE"
+    volumes:
+      - ./mcdata:/data

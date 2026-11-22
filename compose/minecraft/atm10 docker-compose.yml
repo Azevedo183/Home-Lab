@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  minecraft:
+    container_name: atm-10
+    image: itzg/minecraft-server
+    tty: true
+    stdin_open: true
+    ports:
+      - "25565:25565"
+    environment:
+      TYPE: "AUTO_CURSEFORGE"
+      CF_API_KEY: "${CF_API_KEY}"
+      CF_SLUG: all-the-mods-10
+      CF_OVERRIDES_EXCLUSIONS: |
+        # Not applicable for server side
+        shaderpacks/**
+      CF_EXCLUDE_MODS: |
+        smithing-template-viewer
+        colorwheel
+        colorwheel-patcher
+        omega-config
+        relics-mod
+        alltheleaks
+      INIT_MEMORY: 4G
+      MAX_MEMORY: 12G
+      VERSION: "1.21.1"
+      EULA: "TRUE"
+      ENABLE_AUTOPAUSE: "FALSE"
+    volumes:
+      - ./mcdata:/data
+    restart: unless-stopped
