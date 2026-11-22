@@ -30,7 +30,7 @@ e Pangolin e armazenamento em ZFS.
 | [Jellyfin](docs/services/jellyfin.md) | Streaming de vídeo | LXC | Community-Scripts | Pangolin |
 | [MySpeed](docs/services/myspeed.md) | Teste de velocidade automático | LXC | Community-Scripts | VPN |
 | [Docker](docs/services/docker.md) | Host Docker e servidor Minecraft | LXC + Docker | Community-Scripts + Docker Compose | Direto (Minecraft) |
-| LibreSpeed | Teste de velocidade interno | LXC | Community-Scripts | VPN |
+| [LibreSpeed](docs/services/librespeed.md) | Teste de velocidade interno | LXC | Community-Scripts | VPN |
 | Navidrome | Streaming de áudio | LXC | Community-Scripts | Pangolin |
 | Aria2 | Gestor de downloads | LXC | Community-Scripts | VPN |
 | Pingvin Share | Partilha de ficheiros | LXC + Docker | Docker Compose | Pangolin |
