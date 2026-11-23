@@ -35,7 +35,7 @@ e Pangolin e armazenamento em ZFS.
 | [Aria2](docs/services/aria2.md) | Gestor de downloads | LXC | Community-Scripts | VPN |
 | [Pingvin Share](docs/services/pingvin.md) | Partilha de ficheiros | LXC + Docker | Docker Compose | Pangolin |
 | [Stirling PDF](docs/services/stirling-pdf.md) | Ferramentas de PDF | LXC | Community-Scripts | Pangolin |
-| Nextcloud | Drive pessoal | LXC + Docker | Docker Compose | Pangolin |
+| [Nextcloud](docs/services/nextcloud.md) | Drive pessoal (desativado) | LXC + Docker | Docker Compose | Pangolin |
 | [n8n](docs/services/n8n.md) | Automatização de workflows | LXC + Docker | Docker Compose | Pangolin |
 | Immich | Backup de fotos e vídeos | LXC | Community-Scripts | Pangolin |
 | Pangolin | Reverse proxy zero-trust | LXC + Docker | Docker Compose | Direto |
