@@ -71,7 +71,7 @@ Atualmente esta com a seguinte configuração
 Os mods que só funcionam no cliente são excluídos através da variável
 `CF_EXCLUDE_MODS`, porque podem impedir o servidor de arrancar.
 
-Os docker-compose de todas as instancias encontram-se em arquivo em [`compose/minecraft/`](../../compose/mineccraft)
+Os docker-compose de todas as instancias encontram-se em arquivo em [`compose/minecraft/`](../../compose/minecraft)
 
 ## Segurança
 
