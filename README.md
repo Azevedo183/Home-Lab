@@ -38,7 +38,7 @@ e Pangolin e armazenamento em ZFS.
 | [Nextcloud](docs/services/nextcloud.md) | Drive pessoal (desativado) | LXC + Docker | Docker Compose | Pangolin |
 | [n8n](docs/services/n8n.md) | Automatização de workflows | LXC + Docker | Docker Compose | Pangolin |
 | [Immich](docs/services/immich.md) | Backup de fotos e vídeos (desativado) | LXC | Community-Scripts | Pangolin |
-| Pangolin | Reverse proxy zero-trust | LXC + Docker | Docker Compose | Direto |
+| [Pangolin](docs/services/pangolin.md) | Reverse proxy zero-trust | LXC + Docker | Docker Compose | Direto |
 | Cloudflare DDNS | Atualização do DNS dinâmico | LXC | Community-Scripts | VPN |
 
 ## Rede e acesso remoto
